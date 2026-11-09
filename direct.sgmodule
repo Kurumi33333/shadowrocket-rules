@@ -1,0 +1,18 @@
+#!name=CN Games & WeChat Direct
+#!desc=Personal DIRECT rules for CN Arknights, CN Brawl Stars and WeChat mini-program platform. Airport config stays untouched.
+
+[Rule]
+# Arknights CN: Hypergryph
+DOMAIN-SUFFIX,hypergryph.com,DIRECT
+
+# Brawl Stars CN: Tencent / CN official domains
+DOMAIN,bs.qq.com,DIRECT
+DOMAIN-SUFFIX,brawlstars.cn,DIRECT
+
+# WeChat and mini-program platform (not all third-party mini-program domains)
+DOMAIN-SUFFIX,servicewechat.com,DIRECT
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,wechat.com,DIRECT
+DOMAIN-SUFFIX,qpic.cn,DIRECT
+
+# Only the above domains are overridden. No global CN geo-IP fallback.
