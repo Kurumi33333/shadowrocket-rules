@@ -1,5 +1,5 @@
-#!name=CN Games & WeChat Direct
-#!desc=Personal DIRECT rules for CN Arknights, CN Brawl Stars and WeChat mini-program platform. Airport config stays untouched.
+#!name=CN Games, WeChat & HeyBox Direct
+#!desc=Personal DIRECT rules for selected CN games, WeChat mini-program services and HeyBox. No FINAL, GEOIP or DNS overrides; airport config stays untouched.
 
 [Rule]
 # Arknights CN: Hypergryph
@@ -15,4 +15,11 @@ DOMAIN-SUFFIX,weixin.qq.com,DIRECT
 DOMAIN-SUFFIX,wechat.com,DIRECT
 DOMAIN-SUFFIX,qpic.cn,DIRECT
 
-# Only the above domains are overridden. No global CN geo-IP fallback.
+# HeyBox / Xiaoheihe: official web and API domains
+DOMAIN-SUFFIX,xiaoheihe.cn,DIRECT
+
+# HeyBox image CDN observed in Shadowrocket rule test
+# Exact host only: avoid forcing unrelated max-c.com services to DIRECT
+DOMAIN,imgheybox.max-c.com,DIRECT
+
+# No catch-all rules; all unlisted domains continue through the airport config.
