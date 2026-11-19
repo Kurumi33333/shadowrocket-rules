@@ -22,4 +22,9 @@ DOMAIN-SUFFIX,xiaoheihe.cn,DIRECT
 # Exact host only: avoid forcing unrelated max-c.com services to DIRECT
 DOMAIN,imgheybox.max-c.com,DIRECT
 
+# Douyin / ByteDance CN services: keep API and assets DIRECT
+DOMAIN-SUFFIX,amemv.com,DIRECT
+DOMAIN-SUFFIX,bytegecko.com,DIRECT
+DOMAIN-SUFFIX,ecombdapi.com,DIRECT
+
 # No catch-all rules; all unlisted domains continue through the airport config.
