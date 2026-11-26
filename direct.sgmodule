@@ -27,9 +27,4 @@ DOMAIN-SUFFIX,amemv.com,DIRECT
 DOMAIN-SUFFIX,bytegecko.com,DIRECT
 DOMAIN-SUFFIX,ecombdapi.com,DIRECT
 
-# Oyunfor checkout and payment gateways: force the entire flow through DIRECT
-DOMAIN-SUFFIX,oyunfor.com,DIRECT
-DOMAIN-SUFFIX,paytr.com,DIRECT
-DOMAIN-SUFFIX,iyzipay.com,DIRECT
-
 # No catch-all rules; all unlisted domains continue through the airport config.
