@@ -1,19 +1,15 @@
-# Personal DIRECT rules for Mihomo / Clash Verge
-# Converted from ../direct.sgmodule; keep the two client formats in sync.
+# Generated from direct.sgmodule by sync_direct.py; do not edit.
+# Mihomo / Clash Verge: classical rule-provider, behavior: classical.
 
-# Arknights CN: Hypergryph
 DOMAIN-SUFFIX,hypergryph.com
-
-# Brawl Stars CN: Tencent / CN official domains
 DOMAIN,bs.qq.com
 DOMAIN-SUFFIX,brawlstars.cn
-
-# WeChat and mini-program platform
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,qpic.cn
-
-# HeyBox / Xiaoheihe
 DOMAIN-SUFFIX,xiaoheihe.cn
 DOMAIN,imgheybox.max-c.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,ecombdapi.com

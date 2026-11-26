@@ -1,0 +1,42 @@
+name: Sync DIRECT rules
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - direct.sgmodule
+      - clash/direct.list
+      - sync_direct.py
+      - .github/workflows/sync-direct.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-direct-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Generate and check Clash rules
+        run: |
+          python3 sync_direct.py
+          python3 sync_direct.py --check
+      - name: Commit generated changes
+        run: |
+          git add clash/direct.list
+          if git diff --cached --quiet; then
+            echo "Already in sync"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync Clash DIRECT rules"
+          git push origin HEAD:main
