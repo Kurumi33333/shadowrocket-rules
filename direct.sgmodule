@@ -1,5 +1,5 @@
 #!name=CN Games, WeChat & HeyBox Direct
-#!desc=Personal DIRECT rules for selected CN services and Oyunfor checkout. No FINAL, GEOIP or DNS overrides; airport config stays untouched.
+#!desc=Personal DIRECT rules for selected CN services. No FINAL, GEOIP or DNS overrides; airport config stays untouched.
 
 [Rule]
 # Arknights CN: Hypergryph
@@ -26,10 +26,5 @@ DOMAIN,imgheybox.max-c.com,DIRECT
 DOMAIN-SUFFIX,amemv.com,DIRECT
 DOMAIN-SUFFIX,bytegecko.com,DIRECT
 DOMAIN-SUFFIX,ecombdapi.com,DIRECT
-
-# Oyunfor / card checkout (shared PayTR and iyzico gateways)
-DOMAIN-SUFFIX,oyunfor.com,DIRECT
-DOMAIN,www.paytr.com,DIRECT
-DOMAIN-SUFFIX,iyzipay.com,DIRECT
 
 # No catch-all rules; all unlisted domains continue through the airport config.
