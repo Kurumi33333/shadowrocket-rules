@@ -46,6 +46,12 @@ def main():
         "# Converted to Shadowrocket format. See ai-isp.LICENSE.",
         "[Rule]",
     ]
+    custom_domains = Path(__file__).with_name("clash").joinpath("isp-custom.list").read_text(encoding="utf-8").splitlines()
+    output.extend(("", "# Custom ISP domains"))
+    for domain in custom_domains:
+        if not domain.startswith("+.") or not DOMAIN.fullmatch(domain[2:]):
+            raise ValueError(f"Unsupported custom domain rule: {domain!r}")
+        output.append(f"DOMAIN-SUFFIX,{domain[2:]},YouProxy-US")
     for name, title, domain in SERVICES:
         output.extend(("", f"# {title}"))
         output.extend(f"{kind},{host},YouProxy-US" for kind, host in load_rules(name, domain))

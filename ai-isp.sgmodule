@@ -5,6 +5,9 @@
 # Converted to Shadowrocket format. See ai-isp.LICENSE.
 [Rule]
 
+# Custom ISP domains
+DOMAIN-SUFFIX,ippure.com,YouProxy-US
+
 # OpenAI / Codex
 DOMAIN,openaiapi-site.azureedge.net,YouProxy-US
 DOMAIN,openaiassets.blob.core.windows.net,YouProxy-US
